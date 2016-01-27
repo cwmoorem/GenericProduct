@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <InputSet
+    id="GenericProductInputInputSet"
+    mode="date">
+    <Require
+      name="genericAttribute"
+      type="entity.GenericAttributeMap_Ext"/>
+    <Require
+      name="coverable"
+      type="GPGeneric_Ext"/>
+    <Variable
+      initialValue="new acc.pc.lob.gp.pageprocess.GenericProductInputInputSet(genericAttribute, coverable)"
+      name="pageProcess"/>
+    <DateInput
+      dateFormat="short"
+      editable="true"
+      id="dateValueInput"
+      label="pageProcess.name"
+      required="pageProcess.required"
+      value="pageProcess.dateValue"/>
+  </InputSet>
+</PCF>

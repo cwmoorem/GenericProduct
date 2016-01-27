@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="GPGenericExclusionsDV">
+    <Require
+      name="selectedItem"
+      type="GPGeneric_Ext"/>
+    <Require
+      name="pageProcess"
+      type="acc.pc.lob.gp.pageprocess.GPGenericScreen"/>
+    <InputColumn>
+      <InputIterator
+        elementName="exclusionPattern"
+        forceRefreshDespiteChangedEntries="true"
+        id="ExclusionIterator"
+        value="pageProcess.ExclPatterns(selectedItem)">
+        <IteratorSort
+          sortBy="exclusionPattern.Priority"
+          sortOrder="1"/>
+        <InputSet
+          id="CoverageInputSet">
+          <HiddenInput
+            id="CovPatternDisplayName"
+            value="exclusionPattern.DisplayName"/>
+          <InputGroup
+            allowToggle="exclusionPattern.allowToggle(selectedItem)"
+            childrenVisible="selectedItem.getCoverageConditionOrExclusion(exclusionPattern) != null"
+            id="CovPatternInputGroup"
+            label="pageProcess.clauseName(selectedItem, exclusionPattern.PublicID)"
+            onToggle="selectedItem.setCoverageConditionOrExclusionExists(exclusionPattern, VALUE)">
+            <!-- <TextInput
+              id="ExclusionDescription"
+              value="exclusionPattern.Description"
+              visible="!exclusionPattern.CovTerms.HasElements"/> -->
+            <InputIterator
+              elementName="term"
+              forceRefreshDespiteChangedEntries="true"
+              id="CovTermIterator"
+              value="pageProcess.clauseTerms(selectedItem, exclusionPattern.PublicID)">
+              <InputSetRef
+                def="GenericTermInputSet(term, exclusionPattern, selectedItem)"
+                editable="true //coveragePattern.coveragePattern.allowToggle(selectedItem)"
+                mode="term.AttributeValueType"/>
+            </InputIterator>
+          </InputGroup>
+        </InputSet>
+      </InputIterator>
+    </InputColumn>
+    <InputColumn>
+      <InputIterator
+        elementName="conditionPattern"
+        forceRefreshDespiteChangedEntries="true"
+        id="ConditionIterator"
+        value="pageProcess.conPatterns(selectedItem)">
+        <IteratorSort
+          sortBy="conditionPattern.Priority"
+          sortOrder="1"/>
+        <InputSet
+          id="CoverageInputSet">
+          <HiddenInput
+            id="CovPatternDisplayName"
+            value="conditionPattern.DisplayName"/>
+          <InputGroup
+            allowToggle="conditionPattern.allowToggle(selectedItem)"
+            childrenVisible="selectedItem.getCoverageConditionOrExclusion(conditionPattern) != null"
+            id="CovPatternInputGroup"
+            label="pageProcess.clauseName(selectedItem, conditionPattern.PublicID)"
+            onToggle="selectedItem.setCoverageConditionOrExclusionExists(conditionPattern, VALUE)">
+            <!-- <TextInput
+              id="ExclusionDescription"
+              value="conditionPattern.Description"
+              visible="!conditionPattern.CovTerms.HasElements"/> -->
+            <InputIterator
+              elementName="term"
+              forceRefreshDespiteChangedEntries="true"
+              id="CovTermIterator"
+              value="pageProcess.clauseTerms(selectedItem, conditionPattern.PublicID)">
+              <InputSetRef
+                def="GenericTermInputSet(term, conditionPattern, selectedItem)"
+                editable="true //coveragePattern.coveragePattern.allowToggle(selectedItem)"
+                mode="term.AttributeValueType"/>
+            </InputIterator>
+          </InputGroup>
+        </InputSet>
+      </InputIterator>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

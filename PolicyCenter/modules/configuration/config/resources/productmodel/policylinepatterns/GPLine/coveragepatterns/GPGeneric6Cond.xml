@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ConditionPattern
+  codeIdentifier="GPGeneric6Cond"
+  conditionSubtype="GPGenericCond_Ext"
+  coverageCategory="GPGenericCondGrp"
+  lookupTableName="GPGenericCond_Ext"
+  owningEntityType="GPGeneric_Ext"
+  policyLinePattern="GPLine"
+  priority="600"
+  public-id="GPGeneric6Cond"
+  referenceDateByType="PolicyTerm">
+    <AvailabilityScript><![CDATA[return GPGeneric_Ext.conditionAvailable("GPGeneric6Cond")]]></AvailabilityScript>
+    <ExistenceScript><![CDATA[return GPGeneric_Ext.conditionExistence("GPGeneric6Cond")]]></ExistenceScript>
+  <CovTerms/>
+</ConditionPattern>

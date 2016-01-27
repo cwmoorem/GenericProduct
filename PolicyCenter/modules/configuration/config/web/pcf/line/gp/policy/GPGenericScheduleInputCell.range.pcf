@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <ModalCell
+    id="GPGenericScheduleInputCell"
+    mode="range">
+    <Require
+      name="genericItem"
+      type="GenericScheduleItemMap_Ext"/>
+    <Require
+      name="scheduleItem"
+      type="GPScheduleItem_Ext"/>
+    <Variable
+      initialValue="new acc.pc.lob.gp.pageprocess.GPGenericScheduleInputCell(genericItem, scheduleItem)"
+      name="pageProcess"/>
+    <RangeCell
+      editable="true"
+      id="rangeInputCell"
+      optionLabel="VALUE.name"
+      required="pageProcess.required"
+      sortValueRange="false"
+      value="pageProcess.rangeValue"
+      valueRange="pageProcess.rangeList.orderBy(\ r -&gt; r.priority)"/>
+  </ModalCell>
+</PCF>

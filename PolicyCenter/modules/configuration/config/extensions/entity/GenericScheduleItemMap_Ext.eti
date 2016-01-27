@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic attribute mapping for sub product"
+  entity="GenericScheduleItemMap_Ext"
+  exportable="true"
+  table="genericscheditmmap_ext"
+  type="retireable">
+  <implementsEntity
+    name="GenericAttributeDelegate_Ext"/>
+  <foreignkey
+    desc="Parent generic schedule item"
+    fkentity="GenericScheduleMap_Ext"
+    name="GenericScheduleMap"
+    nullok="false"/>
+</entity>

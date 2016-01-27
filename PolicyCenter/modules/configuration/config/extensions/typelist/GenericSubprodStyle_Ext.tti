@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="GenericSubproductStyle"
+  name="GenericSubprodStyle_Ext">
+  <typecode
+    code="multitab"
+    desc="Multiple Tabs"
+    name="Multiple Tabs"/>
+  <typecode
+    code="singletab"
+    desc="Single Tab"
+    name="Single Tab"/>
+</typelist>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="GPLineCovCost_Ext"
+  desc="Description"
+  subpackage="lob.gp"
+  supertype="GPCost_Ext">
+  <implementsInterface
+    iface="acc.pc.lob.gp.financials.GPCostMethods"
+    impl="acc.pc.lob.gp.financials.GPLineCovCost_ExtMethodsImpl"/>
+  <implementsEntity
+    name="Cost"
+    adapter="acc.pc.lob.gp.financials.GPCostAdapter"/>
+  <foreignkey
+    name="GPGenericLineCov"
+    fkentity="GPGenericLineCov_Ext"
+    exportable="true"
+    nullok="false"/>
+
+
+</subtype>

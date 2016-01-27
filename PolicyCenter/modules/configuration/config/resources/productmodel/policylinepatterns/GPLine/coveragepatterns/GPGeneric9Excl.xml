@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ExclusionPattern
+  codeIdentifier="GPGeneric9Excl"
+  coverageCategory="GPGenericExclGrp"
+  exclusionSubtype="GPGenericExcl_Ext"
+  lookupTableName="GPGenericExcl_Ext"
+  owningEntityType="GPGeneric_Ext"
+  policyLinePattern="GPLine"
+  priority="900"
+  public-id="GPGeneric9Excl"
+  referenceDateByType="PolicyTerm">
+    <AvailabilityScript><![CDATA[return GPGeneric_Ext.exclusionAvailable("GPGeneric9Excl")]]></AvailabilityScript>
+    <ExistenceScript><![CDATA[return GPGeneric_Ext.exclusionExistence("GPGeneric9Excl")]]></ExistenceScript>
+  <CovTerms/>
+</ExclusionPattern>

@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<delegate xmlns="http://guidewire.com/datamodel"
+  name="GPAttributeDelegate_Ext">
+
+  <column name="StringValue1" type="shorttext" nullok="true"/>
+  <column name="StringValue2" type="shorttext" nullok="true"/>
+  <column name="StringValue3" type="shorttext" nullok="true"/>
+  <column name="StringValue4" type="shorttext" nullok="true"/>
+  <column name="StringValue5" type="shorttext" nullok="true"/>
+  <column name="StringValue6" type="shorttext" nullok="true"/>
+  <column name="StringValue7" type="shorttext" nullok="true"/>
+  <column name="StringValue8" type="shorttext" nullok="true"/>
+  <column name="StringValue9" type="shorttext" nullok="true"/>
+  <column name="StringValue10" type="shorttext" nullok="true"/>
+  <column name="StringValue11" type="shorttext" nullok="true"/>
+  <column name="StringValue12" type="shorttext" nullok="true"/>
+  <column name="StringValue13" type="shorttext" nullok="true"/>
+  <column name="StringValue14" type="shorttext" nullok="true"/>
+  <column name="StringValue15" type="shorttext" nullok="true"/>
+  <column name="StringValue16" type="shorttext" nullok="true"/>
+  <column name="StringValue17" type="shorttext" nullok="true"/>
+  <column name="StringValue18" type="shorttext" nullok="true"/>
+  <column name="StringValue19" type="shorttext" nullok="true"/>
+  <column name="StringValue20" type="shorttext" nullok="true"/>
+  <column name="StringValue21" type="shorttext" nullok="true"/>
+  <column name="StringValue22" type="shorttext" nullok="true"/>
+  <column name="StringValue23" type="shorttext" nullok="true"/>
+  <column name="StringValue24" type="shorttext" nullok="true"/>
+  <column name="StringValue25" type="shorttext" nullok="true"/>
+  <column name="StringValue26" type="shorttext" nullok="true"/>
+  <column name="StringValue27" type="shorttext" nullok="true"/>
+  <column name="StringValue28" type="shorttext" nullok="true"/>
+  <column name="StringValue29" type="shorttext" nullok="true"/>
+  <column name="StringValue30" type="shorttext" nullok="true"/>
+  <column name="StringValue31" type="shorttext" nullok="true"/>
+  <column name="StringValue32" type="shorttext" nullok="true"/>
+  <column name="StringValue33" type="shorttext" nullok="true"/>
+  <column name="StringValue34" type="shorttext" nullok="true"/>
+  <column name="StringValue35" type="shorttext" nullok="true"/>
+  <column name="StringValue36" type="shorttext" nullok="true"/>
+  <column name="StringValue37" type="shorttext" nullok="true"/>
+  <column name="StringValue38" type="shorttext" nullok="true"/>
+  <column name="StringValue39" type="shorttext" nullok="true"/>
+
+  <column name="MultiLineStringValue1" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue2" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue3" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue4" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue5" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue6" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue7" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue8" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue9" type="longtext" nullok="true"/>
+  <column name="MultiLineStringValue10" type="longtext" nullok="true"/>
+
+  <column name="BooleanValue1" type="bit" nullok="true"/>
+  <column name="BooleanValue2" type="bit" nullok="true"/>
+  <column name="BooleanValue3" type="bit" nullok="true"/>
+  <column name="BooleanValue4" type="bit" nullok="true"/>
+  <column name="BooleanValue5" type="bit" nullok="true"/>
+  <column name="BooleanValue6" type="bit" nullok="true"/>
+  <column name="BooleanValue7" type="bit" nullok="true"/>
+  <column name="BooleanValue8" type="bit" nullok="true"/>
+  <column name="BooleanValue9" type="bit" nullok="true"/>
+  <column name="BooleanValue10" type="bit" nullok="true"/>
+  <column name="BooleanValue11" type="bit" nullok="true"/>
+  <column name="BooleanValue12" type="bit" nullok="true"/>
+  <column name="BooleanValue13" type="bit" nullok="true"/>
+  <column name="BooleanValue14" type="bit" nullok="true"/>
+  <column name="BooleanValue15" type="bit" nullok="true"/>
+
+  <column name="DateValue1" type="datetime" nullok="true"/>
+  <column name="DateValue2" type="datetime" nullok="true"/>
+  <column name="DateValue3" type="datetime" nullok="true"/>
+  <column name="DateValue4" type="datetime" nullok="true"/>
+  <column name="DateValue5" type="datetime" nullok="true"/>
+  <column name="DateValue6" type="datetime" nullok="true"/>
+  <column name="DateValue7" type="datetime" nullok="true"/>
+  <column name="DateValue8" type="datetime" nullok="true"/>
+  <column name="DateValue9" type="datetime" nullok="true"/>
+  <column name="DateValue10" type="datetime" nullok="true"/>
+
+  <column name="IntegerValue1" type="integer" nullok="true"/>
+  <column name="IntegerValue2" type="integer" nullok="true"/>
+  <column name="IntegerValue3" type="integer" nullok="true"/>
+  <column name="IntegerValue4" type="integer" nullok="true"/>
+  <column name="IntegerValue5" type="integer" nullok="true"/>
+  <column name="IntegerValue6" type="integer" nullok="true"/>
+  <column name="IntegerValue7" type="integer" nullok="true"/>
+  <column name="IntegerValue8" type="integer" nullok="true"/>
+  <column name="IntegerValue9" type="integer" nullok="true"/>
+  <column name="IntegerValue10" type="integer" nullok="true"/>
+
+  <column name="LongValue1" type="longint" nullok="true"/>
+  <column name="LongValue2" type="longint" nullok="true"/>
+  <column name="LongValue3" type="longint" nullok="true"/>
+  <column name="LongValue4" type="longint" nullok="true"/>
+  <column name="LongValue5" type="longint" nullok="true"/>
+  <column name="LongValue6" type="longint" nullok="true"/>
+  <column name="LongValue7" type="longint" nullok="true"/>
+  <column name="LongValue8" type="longint" nullok="true"/>
+  <column name="LongValue9" type="longint" nullok="true"/>
+  <column name="LongValue10" type="longint" nullok="true"/>
+
+  <column name="MoneyValue1" type="money" nullok="true"/>
+  <column name="MoneyValue2" type="money" nullok="true"/>
+  <column name="MoneyValue3" type="money" nullok="true"/>
+  <column name="MoneyValue4" type="money" nullok="true"/>
+  <column name="MoneyValue5" type="money" nullok="true"/>
+  <column name="MoneyValue6" type="money" nullok="true"/>
+  <column name="MoneyValue7" type="money" nullok="true"/>
+  <column name="MoneyValue8" type="money" nullok="true"/>
+  <column name="MoneyValue9" type="money" nullok="true"/>
+  <column name="MoneyValue10" type="money" nullok="true"/>
+
+  <column name="DecimalValue1" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue2" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue3" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue4" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue5" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue6" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue7" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue8" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue9" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+  <column name="DecimalValue10" type="decimal" nullok="true">
+    <columnParam name="scale" value="4"/>
+    <columnParam name="precision" value="20"/>
+  </column>
+
+</delegate>

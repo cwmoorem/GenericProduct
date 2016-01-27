@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="GenericClauseType"
+  name="GenericClauseType_Ext">
+  <typecode
+    code="coverage"
+    desc="Coverage"
+    name="Coverage"/>
+  <typecode
+    code="condition"
+    desc="Condition"
+    name="Condition"/>
+  <typecode
+    code="exclusion"
+    desc="Exclusion"
+    name="Exclusion"/>
+  <typecode
+    code="modifier"
+    desc="Modifier"
+    name="Modifier"/>
+</typelist>

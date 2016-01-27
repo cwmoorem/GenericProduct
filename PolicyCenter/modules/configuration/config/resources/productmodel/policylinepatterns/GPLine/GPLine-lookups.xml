@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<import>
+  <ModifierLookup public-id="zc5j4ga0k8prr01jd2t8f6d6ff8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric1BooleanMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="z69ja6pg4bgeo891q1i5tp99b68">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric2BooleanMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zm5j8t0aiaajg704ak201j5gd88">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric1TypekeyMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zevj81rtrufacconkpg7h8qou3a">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric3BooleanMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zg2h0jm7ogkuv6cnnkar2meht9a">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric3DateMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zv5j40ub2tqph14o9hpgjco8ima">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric4BooleanMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zhggkk9g1cu4m320dmbbr29pd6a">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric2DateMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zvuimkk4209bofprssh9hvevtda">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric4DateMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zo6ic8ih34dn2ceued9lcggpgm8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric1DateMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zg7h4ufk0r4m7cl2m1uit7n58ob">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric5DateMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zgmhugo5n0314631h9h6rv8khh8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric5BooleanMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zpcj01lp0n0219315pboinmeq8b">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric5TypekeyMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zrshm7tqcu9h61hkob0n9qd6upa">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric2TypekeyMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zl1g41riqp0tr4b088lemi5sm09">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric4TypekeyMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+  <ModifierLookup public-id="zo0igqh8a8ski6k5h33tjl3omqb">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <JobType/>
+    <ModifierPatternCode>GPGeneric3TypekeyMod</ModifierPatternCode>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ModifierLookup>
+</import>

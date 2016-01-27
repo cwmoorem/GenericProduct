@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<import>
+  <ConditionLookup public-id="zlcisgtrrlkna7f7fhr60gtk5bb">
+    <Availability>Available</Availability>
+    <ConditionPatternCode>GPGeneric2Cond</ConditionPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ConditionLookup>
+</import>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic product mapping"
+  entity="GenericSubProduct_Ext"
+  exportable="true"
+  table="genericsubproduct_ext"
+  type="retireable">
+  <foreignkey
+    desc="Parent generic product"
+    fkentity="GenericProduct_Ext"
+    name="GenericProduct"
+    nullok="false"/>
+  <typekey
+    name="GenericSubproductStyle"
+    nullok="true"
+    typelist="GenericSubprodStyle_Ext"/>
+  <column
+    desc="The sub product code for the model"
+    name="SubProductCode"
+    nullok="false"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="60"/>
+  </column>
+  <column
+    desc="A Detailed description of the sub product"
+    name="Description"
+    nullok="true"
+    type="longtext"/>
+  <column
+    desc="Name of the sub product"
+    name="Name"
+    nullok="false"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="255"/>
+  </column>
+  <column
+    desc="The contract code for the model"
+    name="ContractCode"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="60"/>
+  </column>
+  <column
+    desc="Version of the sub product model"
+    name="Version"
+    nullok="true"
+    type="integer"/>
+  <array
+    arrayentity="GenericAttributeMap_Ext"
+    desc="Attribute mappings for the sub product coverable"
+    name="GenericAttributeMappings"/>
+  <array
+    arrayentity="GenericClauseMap_Ext"
+    desc="Clause mappings for the sub product coverable"
+    name="GenericClauseMappings"/>
+  <array
+    arrayentity="GenericScheduleMap_Ext"
+    desc="Schedule Mapping for the subproduct"
+    name="GenericScheduleMap"/>
+</entity>

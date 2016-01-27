@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="GPGeneric8Cov"
+  coverageCategory="GPGenericStndGrp"
+  coverageSubtype="GPGenericCov_Ext"
+  coveredPartyType="FirstParty"
+  lookupTableName="GPGenericCov_Ext"
+  owningEntityType="GPGeneric_Ext"
+  policyLinePattern="GPLine"
+  priority="800"
+  public-id="GPGeneric8Cov"
+  referenceDateByType="PolicyTerm">
+    <AvailabilityScript><![CDATA[return GPGeneric_Ext.coverageAvailable("GPGeneric8Cov")]]></AvailabilityScript>
+    <ExistenceScript><![CDATA[return GPGeneric_Ext.coverageExistence("GPGeneric8Cov")]]></ExistenceScript>
+  <CovTerms/>
+</CoveragePattern>

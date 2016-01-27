@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<delegate
+  xmlns="http://guidewire.com/datamodel"
+  name="GenericAttributeDelegate_Ext">
+  <typekey
+    desc="The data type of the attribute"
+    name="AttributeValueType"
+    nullok="true"
+    typelist="AttributeValueType_Ext"/>
+  <column
+    desc="Name of the attribute used for display"
+    name="Name"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    desc="Name of the attribute used for Internationalisation"
+    name="I18nName"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    desc="Detailed description of the attribute"
+    name="Description"
+    nullok="true"
+    type="longtext"/>
+  <column
+    desc="Priority (order) that the attribute will be rendered"
+    name="Priority"
+    nullok="true"
+    type="integer"/>
+  <column
+    desc="Code used to reference the attribute"
+    name="Code"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="120"/>
+  </column>
+  <column
+    desc="The column this attribute will be bound to on either the Generic Line or Generic Coverable"
+    name="Column"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    desc="Indicator that the attribute is required to exist"
+    name="Required"
+    nullok="true"
+    type="bit"/>
+  <typekey
+    name="ListType"
+    nullok="true"
+    typelist="GenericListType_Ext"/>
+  <column
+    name="ListCode"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    desc="Input column to display the attribute 1 or 2"
+    name="InputColumn"
+    nullok="true"
+    type="integer"/>
+</delegate>

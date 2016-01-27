@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="GPTransaction_Ext">
+  <Columns>
+    <Column
+      beanPath="GPTransaction_Ext.GPCost_Ext"
+      name="cost"/>
+  </Columns>
+  <DisplayName><![CDATA[cost]]></DisplayName>
+</Entity>

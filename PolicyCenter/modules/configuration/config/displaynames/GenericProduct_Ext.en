@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="GenericProduct_Ext">
+  <Columns>
+    <Column
+      beanPath="GenericProduct_Ext.Name"
+      name="productName"/>
+  </Columns>
+  <DisplayName><![CDATA[productName]]></DisplayName>
+</Entity>

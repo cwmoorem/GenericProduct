@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <Screen
+    editable="openForEdit"
+    id="GPLineCoveragesScreen">
+    <Require
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Require
+      name="jobWizardHelper"
+      type="web.job.JobWizardHelper"/>
+    <Variable
+      initialValue="policyPeriod.GPLine"
+      name="line"/>
+    <Toolbar>
+      <WizardButtons/>
+      <ToolbarButtonSetRef
+        mode="policyPeriod.Job.Subtype"
+        toolbarButtonSet="JobWizardToolbarButtonSet(policyPeriod, policyPeriod.Job, jobWizardHelper)"/>
+    </Toolbar>
+    <PanelSet>
+      <PanelRef
+        def="OOSEPanelSet(policyPeriod, jobWizardHelper)"/>
+      <CardViewPanel>
+        <Card
+          id="Coverages"
+          title="displaykey.Web.Policy.Coverages">
+          <PanelRef
+            def="GPLineStandardCoveragesDV(line, openForEdit)">
+            <TitleBar
+              title="displaykey.Web.LineWizard.StandardCoverages"/>
+          </PanelRef>
+        </Card>
+        <Card
+          id="AdditionalCoverages"
+          title="displaykey.Web.LineWizard.AdditionalCoverages">
+          <PanelRef
+            def="AdditionalCoveragesPanelSet(line, new String[]{&quot;GPLineAddGrp&quot;}, true)">
+            <TitleBar
+              title="displaykey.Web.LineWizard.AdditionalCoverages"/>
+            <Toolbar/>
+          </PanelRef>
+        </Card>
+        <Card
+          id="exclusionsAndConditionsCard"
+          title="displaykey.Web.LineWizard.ExclusionsAndConditions">
+          <PanelRef
+            def="AdditionalExclusionsAndConditionsPanelSet(line, new String[] {&quot;GPLineExclGrp&quot;, &quot;GPLineCondGrp&quot;}, true)"
+            id="policyLevelExclusionsAndConditions"/>
+        </Card>
+      </CardViewPanel>
+    </PanelSet>
+  </Screen>
+</PCF>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic attribute mapping for product line"
+  entity="GenericLineMap_Ext"
+  exportable="true"
+  table="genericlinemap_ext"
+  type="retireable">
+  <implementsEntity
+    name="GenericAttributeDelegate_Ext"/>
+  <foreignkey
+    desc="Parent generic product"
+    fkentity="GenericProduct_Ext"
+    name="GenericProduct"
+    nullok="false"/>
+</entity>

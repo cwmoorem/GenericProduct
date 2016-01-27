@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <PanelSet
+    available="true"
+    editable="true"
+    id="GPGenericSchedulePanelSet"
+    visible="true">
+    <Require
+      name="selectedItem"
+      type="GPSchedule_Ext"/>
+    <Variable
+      initialValue="new acc.pc.lob.gp.pageprocess.GPGenericSchedulePanelSet(selectedItem)"
+      name="pageProcess"/>
+    <PanelRef>
+      <Toolbar>
+        <IteratorButtons
+          addVisible="true"
+          iterator="scheduleIterator"
+          removeVisible="true"/>
+      </Toolbar>
+      <ListViewPanel>
+        <RowIterator
+          editable="true"
+          elementName="item"
+          id="scheduleIterator"
+          toCreateAndAdd="pageProcess.addNewItem()"
+          toRemove="pageProcess.removeItem(item)"
+          value="pageProcess.generic.GPScheduleItem"
+          visible="true">
+          <Row>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(1), item)"
+              editable="true"
+              id="scheduleItemValueCell1"
+              label="pageProcess.cellHeader(1)"
+              mode="pageProcess.AttributeValueType(1)"
+              required="pageProcess.genericItem(1).Required"
+              visible="pageProcess.cellUsed(1)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(2), item)"
+              editable="true"
+              id="scheduleItemValueCell2"
+              label="pageProcess.cellHeader(2)"
+              mode="pageProcess.AttributeValueType(2)"
+              required="pageProcess.genericItem(2).Required"
+              visible="pageProcess.cellUsed(2)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(3), item)"
+              editable="true"
+              id="scheduleItemValueCell3"
+              label="pageProcess.cellHeader(3)"
+              mode="pageProcess.AttributeValueType(3)"
+              required="pageProcess.genericItem(3).Required"
+              visible="pageProcess.cellUsed(3)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(4), item)"
+              editable="true"
+              id="scheduleItemValueCell4"
+              label="pageProcess.cellHeader(4)"
+              mode="pageProcess.AttributeValueType(4)"
+              required="pageProcess.genericItem(4).Required"
+              visible="pageProcess.cellUsed(4)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(5), item)"
+              editable="true"
+              id="scheduleItemValueCell5"
+              label="pageProcess.cellHeader(5)"
+              mode="pageProcess.AttributeValueType(5)"
+              required="pageProcess.genericItem(5).Required"
+              visible="pageProcess.cellUsed(5)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(6), item)"
+              editable="true"
+              id="scheduleItemValueCell6"
+              label="pageProcess.cellHeader(6)"
+              mode="pageProcess.AttributeValueType(6)"
+              required="pageProcess.genericItem(6).Required"
+              visible="pageProcess.cellUsed(6)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(7), item)"
+              editable="true"
+              id="scheduleItemValueCell7"
+              label="pageProcess.cellHeader(7)"
+              mode="pageProcess.AttributeValueType(7)"
+              required="pageProcess.genericItem(7).Required"
+              visible="pageProcess.cellUsed(7)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(8), item)"
+              editable="true"
+              id="scheduleItemValueCell8"
+              label="pageProcess.cellHeader(8)"
+              mode="pageProcess.AttributeValueType(8)"
+              required="pageProcess.genericItem(8).Required"
+              visible="pageProcess.cellUsed(8)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(9), item)"
+              editable="true"
+              id="scheduleItemValueCell9"
+              label="pageProcess.cellHeader(9)"
+              mode="pageProcess.AttributeValueType(9)"
+              required="pageProcess.genericItem(9).Required"
+              visible="pageProcess.cellUsed(9)"/>
+            <ModalCellRef
+              def="GPGenericScheduleInputCell(pageProcess.genericItem(10), item)"
+              editable="true"
+              id="scheduleItemValueCell10"
+              label="pageProcess.cellHeader(10)"
+              mode="pageProcess.AttributeValueType(10)"
+              required="pageProcess.genericItem(10).Required"
+              visible="pageProcess.cellUsed(10)"/>
+          </Row>
+        </RowIterator>
+      </ListViewPanel>
+    </PanelRef>
+  </PanelSet>
+</PCF>

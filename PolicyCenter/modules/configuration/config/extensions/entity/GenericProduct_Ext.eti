@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic product mapping"
+  entity="GenericProduct_Ext"
+  exportable="true"
+  table="genericproduct_ext"
+  type="retireable">
+  <column
+    desc="The product code for the model"
+    name="ProductCode"
+    nullok="false"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="60"/>
+  </column>
+  <column
+    desc="A Detailed description of the product"
+    name="Description"
+    nullok="true"
+    type="longtext"/>
+  <column
+    desc="Name of the product"
+    name="Name"
+    nullok="false"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="255"/>
+  </column>
+  <column
+    desc="Indicator showing that this is a legacy product"
+    name="Legacy"
+    nullok="true"
+    type="bit"/>
+  <array
+    arrayentity="GenericSubProduct_Ext"
+    desc="Array of sub products under the product"
+    name="GenericSubProducts"/>
+  <array
+    arrayentity="GenericLineMap_Ext"
+    desc="Attribute mappings for the product line"
+    name="GenericLineMappings"/>
+</entity>

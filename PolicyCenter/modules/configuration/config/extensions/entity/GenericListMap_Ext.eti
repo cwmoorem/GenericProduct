@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic List Mappings"
+  entity="GenericListMap_Ext"
+  exportable="true"
+  table="genericlistmap_ext"
+  type="retireable">
+  <column
+    desc="Name of the List item used for display"
+    name="Name"
+    nullok="true"
+    type="shorttext"/>
+  <column
+    desc="Detailed description of the list item"
+    name="Description"
+    nullok="true"
+    type="longtext"/>
+  <column
+    desc="Priority (order) that the list will be rendered"
+    name="Priority"
+    nullok="true"
+    type="integer"/>
+  <column
+    desc="Code used to reference the list"
+    name="Code"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="120"/>
+  </column>
+  <index
+    name="GenericList1">
+    <indexcol
+      keyposition="1"
+      name="Code"/>
+    <indexcol
+      keyposition="2"
+      name="ListCode"/>
+    <indexcol
+      keyposition="3"
+      name="Retired"/>
+  </index>
+  <column
+    name="ListCode"
+    nullok="false"
+    type="shorttext"/>
+</entity>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="GenericListType"
+  name="GenericListType_Ext">
+  <typecode
+    code="mappedlist"
+    desc="Mapped List"
+    name="Mapped List"/>
+  <typecode
+    code="typelist"
+    desc="Typelist"
+    name="Typelist"/>
+</typelist>

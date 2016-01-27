@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <DetailViewPanel
+    editable="true"
+    id="GPGenericModifiersDV">
+    <Require
+      name="selectedItem"
+      type="GPGeneric_Ext"/>
+    <Require
+      name="pageProcess"
+      type="acc.pc.lob.gp.pageprocess.GPGenericScreen"/>
+    <InputColumn>
+      <InputIterator
+        elementName="modifier"
+        forceRefreshDespiteChangedEntries="true"
+        id="ModifierIterator"
+        value="pageProcess.modifiers(selectedItem)">
+        <IteratorSort
+          sortBy="modifier.priority"
+          sortOrder="1"/>
+        <InputSetRef
+          def="GenericModifierInputSet(selectedItem, modifier )"
+          editable="true //coveragePattern.coveragePattern.allowToggle(selectedItem)"
+          mode="modifier.modifierPattern.AttributeValueType"/>
+      </InputIterator>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

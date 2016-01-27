@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<import>
+  <ExclusionLookup public-id="zvoh444db7afe4ser8lul9bfqd8">
+    <Availability>Available</Availability>
+    <EndEffectiveDate/>
+    <ExclusionPatternCode>GPGeneric6Excl</ExclusionPatternCode>
+    <JobType/>
+    <PolicyLinePatternCode>GPLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </ExclusionLookup>
+</import>

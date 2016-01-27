@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic clause mapping for sub product"
+  entity="GenericClauseMap_Ext"
+  exportable="true"
+  table="genericclausemap_ext"
+  type="retireable">
+  <implementsEntity
+    name="GenericAttributeDelegate_Ext"/>
+  <foreignkey
+    desc="Parent generic sub product"
+    fkentity="GenericSubProduct_Ext"
+    name="GenericSubProduct"
+    nullok="false"/>
+  <typekey
+    desc="Type of Clause"
+    name="GenericClauseType"
+    nullok="true"
+    typelist="GenericClauseType_Ext"/>
+  <typekey
+    desc="Existance of the clause"
+    name="ExistenceType"
+    nullok="true"
+    typelist="ExistenceType"/>
+  <column
+    desc="Charge Pattern for the clause"
+    name="ChargePatternCode"
+    nullok="true"
+    type="shorttext"/>
+  <array
+    arrayentity="GenericTermMap_Ext"
+    desc="Term mappings associated to the clause"
+    name="GenericTermMapping"/>
+  <column
+    desc="Name of the rate routine that may be used to rate this clause"
+    name="RateRoutine"
+    nullok="true"
+    type="shorttext"/>
+</entity>

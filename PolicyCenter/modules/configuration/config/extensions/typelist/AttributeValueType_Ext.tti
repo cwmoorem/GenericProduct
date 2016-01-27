@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<typelist
+  xmlns="http://guidewire.com/typelists"
+  desc="AttributeValueType"
+  name="AttributeValueType_Ext">
+  <typecode
+    code="string"
+    desc="String"
+    name="String"/>
+  <typecode
+    code="string_multiline"
+    desc="String Multi Line"
+    name="String Multi Line"/>
+  <typecode
+    code="boolean"
+    desc="Boolean"
+    name="Boolean"/>
+  <typecode
+    code="integer"
+    desc="Integer"
+    name="Integer"/>
+  <typecode
+    code="long"
+    desc="Long"
+    name="Long"/>
+  <typecode
+    code="decimal"
+    desc="Decimal"
+    name="Decimal"/>
+  <typecode
+    code="date"
+    desc="Date"
+    name="Date"/>
+  <typecode
+    code="money"
+    desc="Money"
+    name="Money"/>
+  <typecode
+    code="typekey"
+    desc="Typekey"
+    name="Typekey"/>
+</typelist>

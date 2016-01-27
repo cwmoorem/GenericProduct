@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="GPGeneric_ExtDetailsDV">
+    <Require
+      name="item"
+      type="GPGeneric_Ext"/>
+    <Require
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Require
+      name="line"
+      type="GPGenericLine_Ext"/>
+    <Require
+      name="openForEdit"
+      type="Boolean"/>
+    <Require
+      name="jobWizardHelper"
+      type="gw.api.web.job.JobWizardHelper"/>
+    <InputColumn>
+      <Label
+        label="displaykey.Web.Policy.GP.GPGeneric_Ext.Basic"/>
+      <Input
+        id="FixedID"
+        label="displaykey.Web.Policy.GP.GPGeneric_Ext.ID"
+        value="item.FixedId"/>
+      <Input
+        id="CreateUser"
+        label="displaykey.Web.Policy.GP.GPGeneric_Ext.CreatedBy"
+        value="item.CreateUser.DisplayName"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

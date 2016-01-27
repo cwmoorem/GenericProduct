@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="GPGenericCovCost_Ext">
+  <Columns>
+    <Column
+      beanPath="GPGenericCovCost_Ext.GPGenericCov"
+      name="pattern"/>
+  </Columns>
+  <DisplayName><![CDATA[pattern.Pattern]]></DisplayName>
+</Entity>

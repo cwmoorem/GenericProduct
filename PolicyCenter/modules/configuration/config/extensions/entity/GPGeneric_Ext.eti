@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic Coverable"
+  displayName="GPGeneric"
+  effDatedBranchType="PolicyPeriod"
+  entity="GPGeneric_Ext"
+  exportable="true"
+  loadable="false"
+  subpackage="lob.gp"
+  table="gpgeneric_ext"
+  type="effdated">
+  <implementsEntity
+    adapter="acc.pc.lob.gp.GPGeneric_ExtCoverableAdapter"
+    name="Coverable"/>
+  <implementsEntity
+    adapter="acc.pc.lob.gp.GPGeneric_ExtModifiableAdapter"
+    name="Modifiable"/>
+  <foreignkey
+    fkentity="GPGenericLine_Ext"
+    name="GPLine"
+    nullok="false"/>
+  <array
+    arrayentity="GPGenericCov_Ext"
+    cascadeDelete="true"
+    desc="Coverages directly attached to the GPGeneric"
+    name="Coverages"/>
+  <array
+    arrayentity="GPGenericExcl_Ext"
+    cascadeDelete="true"
+    desc="Exclusions directly attached to the GPGeneric"
+    name="Exclusions"/>
+  <array
+    arrayentity="GPGenericCond_Ext"
+    cascadeDelete="true"
+    desc="Conditions directly attached to the GPGeneric"
+    name="Conditions"/>
+  <array
+    arrayentity="GPGenericMod_Ext"
+    cascadeDelete="true"
+    desc="Modifiers directly attached to the GPGeneric"
+    name="GPGenericMod_Exts"/>
+  <array
+    arrayentity="GPGenericCovCost_Ext"
+    cascadeDelete="true"
+    name="GPGenericCovCosts"/>
+  <column
+    desc="Internal field for storing the reference date of this entity on bound policy periods."
+    name="ReferenceDateInternal"
+    nullok="true"
+    type="datetime"/>
+  <foreignkey
+    fkentity="GenericSubProduct_Ext"
+    name="GenericSubproduct"
+    nullok="false"/>
+  <array
+    arrayentity="GPSchedule_Ext"
+    name="GPSchedules"/>
+  <implementsEntity
+    name="GPAttributeDelegate_Ext"/>
+</entity>

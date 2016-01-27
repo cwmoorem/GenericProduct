@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <DetailViewPanel
+    editable="true"
+    id="GPGenericCoveragesDV">
+    <Require
+      name="selectedItem"
+      type="GPGeneric_Ext"/>
+    <Require
+      name="pageProcess"
+      type="acc.pc.lob.gp.pageprocess.GPGenericScreen"/>
+    <InputColumn>
+      <InputIterator
+        elementName="coveragePattern"
+        forceRefreshDespiteChangedEntries="true"
+        id="CovCategoryIterator"
+        value="pageProcess.covPatterns(selectedItem).orderBy(\ c -&gt; c.priority)">
+        <IteratorSort
+          sortBy="coveragePattern.priority"
+          sortOrder="1"/>
+        <InputSet
+          id="CoverageInputSet">
+          <HiddenInput
+            id="CovPatternDisplayName"
+            value="coveragePattern.coveragePattern.DisplayName"/>
+          <InputGroup
+            allowToggle="coveragePattern.coveragePattern.allowToggle(selectedItem)"
+            childrenVisible="selectedItem.getCoverageConditionOrExclusion(coveragePattern.coveragePattern) != null"
+            id="CovPatternInputGroup"
+            label="pageProcess.clauseName(selectedItem, coveragePattern.coveragePattern.PublicID)"
+            onToggle="selectedItem.setCoverageConditionOrExclusionExists(coveragePattern.coveragePattern, VALUE)">
+            <!-- <TextInput
+              id="ExclusionDescription"
+              value="coveragePattern.Description"
+              visible="!coveragePattern.CovTerms.HasElements"/> -->
+            <InputIterator
+              elementName="term"
+              forceRefreshDespiteChangedEntries="true"
+              id="CovTermIterator"
+              value="pageProcess.clauseTerms(selectedItem, coveragePattern.coveragePattern.PublicID).orderBy(\ g -&gt; g.Priority)">
+              <InputSetRef
+                def="GenericTermInputSet(term, coveragePattern.coveragePattern, selectedItem)"
+                editable="true //coveragePattern.coveragePattern.allowToggle(selectedItem)"
+                mode="term.AttributeValueType"/>
+            </InputIterator>
+          </InputGroup>
+        </InputSet>
+      </InputIterator>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

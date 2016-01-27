@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="GPGeneric_ExtCoveragesDV">
+    <Require
+      name="item"
+      type="GPGeneric_Ext"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="item != null ? item.PolicyLine.Pattern.getCoverageCategory(&quot;GPGenericStndGrp&quot;).coveragePatternsForEntity(GPGeneric_Ext).whereSelectedOrAvailable(item, openForEdit) : null"
+      name="covPatterns"
+      recalculateOnRefresh="true"/>
+    <InputColumn>
+      <InputIterator
+        elementName="coveragePattern"
+        forceRefreshDespiteChangedEntries="true"
+        id="CovCategoryIterator"
+        value="covPatterns">
+        <IteratorSort
+          sortBy="coveragePattern.Priority"
+          sortOrder="1"/>
+        <InputSetRef
+          def="CoverageInputSet(coveragePattern, item, openForEdit)"
+          mode="coveragePattern.Code"/>
+      </InputIterator>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

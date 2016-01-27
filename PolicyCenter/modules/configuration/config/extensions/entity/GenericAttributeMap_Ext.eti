@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic attribute mapping for sub product"
+  entity="GenericAttributeMap_Ext"
+  exportable="true"
+  table="genericattmap_ext"
+  type="retireable">
+  <implementsEntity
+    name="GenericAttributeDelegate_Ext"/>
+  <foreignkey
+    desc="Parent generic sub product"
+    fkentity="GenericSubProduct_Ext"
+    name="GenericSubProduct"
+    nullok="false"/>
+  <column
+    default="true"
+    name="Printout"
+    nullok="true"
+    type="bit"/>
+</entity>

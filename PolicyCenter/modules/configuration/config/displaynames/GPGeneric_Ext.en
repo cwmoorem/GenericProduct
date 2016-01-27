@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Entity
+  name="GPGeneric_Ext">
+  <Columns>
+  </Columns>
+  <DisplayName><![CDATA["GPGeneric"]]></DisplayName>
+</Entity>

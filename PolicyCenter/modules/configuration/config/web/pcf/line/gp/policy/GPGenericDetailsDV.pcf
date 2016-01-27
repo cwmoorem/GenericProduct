@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="GPGenericDetailsDV">
+    <Require
+      name="selectedItem"
+      type="GPGeneric_Ext"/>
+    <Require
+      name="pageProcess"
+      type="acc.pc.lob.gp.pageprocess.GPGenericScreen"/>
+    <InputColumn>
+      <RangeInput
+        editable="true"
+        id="subProduct"
+        label="&quot;Sub Product&quot;"
+        optionLabel="VALUE.Name"
+        required="true"
+        value="selectedItem.GenericSubproduct"
+        valueRange="pageProcess.subProducts">
+        <PostOnChange
+          onChange="pageProcess.subProductCleanup(selectedItem)"/>
+      </RangeInput>
+      <InputIterator
+        elementName="genericAttribute"
+        forceRefreshDespiteChangedEntries="true"
+        id="attributeIterator1"
+        value="pageProcess.attributeItterator(selectedItem,1)">
+        <InputSetRef
+          def="GenericProductInputInputSet(genericAttribute.genericAttributeMap, selectedItem)"
+          mode="genericAttribute.genericAttributeMap.AttributeValueType"/>
+      </InputIterator>
+    </InputColumn>
+    <InputColumn>
+      <InputIterator
+        elementName="genericAttribute"
+        forceRefreshDespiteChangedEntries="true"
+        id="attributeIterator2"
+        value="pageProcess.attributeItterator(selectedItem,2)">
+        <InputSetRef
+          def="GenericProductInputInputSet(genericAttribute.genericAttributeMap, selectedItem)"
+          mode="genericAttribute.genericAttributeMap.AttributeValueType"/>
+      </InputIterator>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

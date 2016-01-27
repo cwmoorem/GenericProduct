@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="GPLineStandardCoveragesDV">
+    <Require
+      name="line"
+      type="GPGenericLine_Ext"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <Variable
+      initialValue="line.Pattern.getCoverageCategory(&quot;GPLineStndGrp&quot;)"
+      name="covCat"/>
+    <Variable
+      initialValue="covCat.coveragePatternsForEntity(GPGenericLine_Ext).whereSelectedOrAvailable(line, openForEdit)"
+      name="covPatterns"
+      recalculateOnRefresh="true"/>
+    <InputColumn>
+      <InputIterator
+        elementName="coveragePattern"
+        forceRefreshDespiteChangedEntries="true"
+        id="covIterator"
+        value="covPatterns">
+        <IteratorSort
+          sortBy="coveragePattern.Priority"
+          sortOrder="1"/>
+        <InputSetRef
+          def="CoverageInputSet(coveragePattern, line, openForEdit)"
+          mode="coveragePattern.PublicID"/>
+      </InputIterator>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

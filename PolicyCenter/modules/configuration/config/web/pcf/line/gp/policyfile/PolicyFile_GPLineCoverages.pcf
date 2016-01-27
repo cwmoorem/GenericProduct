@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <Page
+    afterEnter="gw.api.web.PebblesUtil.addWebMessages(CurrentLocation, policyPeriod.PolicyFileMessages)"
+    canVisit="perm.PolicyPeriod.view(policyPeriod) and perm.System.pfiledetails"
+    id="PolicyFile_GPLineCoverages"
+    parent="PolicyFile(policyPeriod, asOfDate)"
+    title="displaykey.Web.Policy.GP.LineLevelCoverages">
+    <LocationEntryPoint
+      signature="PolicyFile_GPLineCoverages(policyPeriod : PolicyPeriod, asOfDate : DateTime)"/>
+    <Variable
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Variable
+      name="asOfDate"
+      type="DateTime"/>
+    <Screen
+      id="PolicyFile_GPLine_Coverages_Screen">
+      <Variable
+        initialValue="policyPeriod.GPLine"
+        name="line"/>
+      <TitleBar/>
+      <Toolbar/>
+      <PanelSet>
+        <CardViewPanel>
+          <Card
+            id="Coverages"
+            title="displaykey.Web.Policy.Coverages">
+            <PanelRef
+              def="GPLineStandardCoveragesDV(line, false)">
+              <TitleBar
+                title="displaykey.Web.LineWizard.StandardCoverages"/>
+            </PanelRef>
+          </Card>
+          <Card
+            id="AdditionalCoverages"
+            title="displaykey.Web.LineWizard.AdditionalCoverages">
+            <PanelRef
+              def="AdditionalCoveragesDV(line, new String[]{&quot;GPLineAddGrp&quot;}, true)">
+              <TitleBar
+                title="displaykey.Web.LineWizard.AdditionalCoverages"/>
+            </PanelRef>
+          </Card>
+        <Card
+          id="exclusionsAndConditionsCard"
+          title="displaykey.Web.LineWizard.ExclusionsAndConditions">
+          <PanelRef
+            def="AdditionalExclusionsAndConditionsPanelSet(line, new String[] {&quot;GPLineExclGrp&quot;, &quot;GPLineCondGrp&quot;}, true)"
+            id="policyLevelExclusionsAndConditions"/>
+        </Card>
+        </CardViewPanel>
+      </PanelSet>
+    </Screen>
+  </Page>
+</PCF>

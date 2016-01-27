@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <WizardStepSet
+    id="LineWizardStepSet"
+    mode="GPGeneric">
+    <Require
+      name="job"
+      type="Job"/>
+    <Require
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Require
+      name="jobWizardHelper"
+      type="web.job.JobWizardHelper"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <JobWizardStep
+      id="LineCoverages"
+      onEnter="if (openForEdit) { gw.web.productmodel.ProductModelSyncIssuesHandler.sync(policyPeriod.GPLine.AllCoverables, policyPeriod.GPLine.AllModifiables, null, policyPeriod, jobWizardHelper) }"
+      save="policyPeriod.OpenForEdit"
+      screen="GPLineCoveragesScreen(policyPeriod, openForEdit, jobWizardHelper)"
+      title="displaykey.Web.Policy.GP.LineLevelCoverages"
+      visible="policyPeriod.Policy.GenericProduct.GenericLineMappings.Count &gt; 0"/>
+    <JobWizardStep
+      id="GPGeneric"
+      save="policyPeriod.OpenForEdit"
+      screen="GPGenericScreen(policyPeriod, openForEdit,jobWizardHelper)"
+      title="policyPeriod.Policy.GenericProduct.Name"/>
+  </WizardStepSet>
+</PCF>

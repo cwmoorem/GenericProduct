@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="GPLineMod_Ext"
+  type="effdated"
+  desc="A modifier for Generic"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  final="false"
+  loadable="false"
+  subpackage="lob.gp"
+  table="gplinemod_ext">
+  <implementsEntity
+    name="Modifier"
+    adapter="acc.pc.lob.gp.GPLineModifierAdapter"/>
+  <implementsInterface
+    iface="gw.api.copier.EffDatedCopyable"
+    impl="gw.api.copier.EffDatedCopier"/>
+  <implementsInterface
+    iface="gw.api.logicalmatch.EffDatedLogicalMatcher"
+    impl="acc.pc.lob.gp.GPLineModifierMatcher"/>
+  <foreignkey
+    name="GPGenericLine_Ext"
+    fkentity="GPGenericLine_Ext"
+    nullok="false"/>
+  <array
+    name="GPLineRateFactors"
+    desc="Individual components of the rating factor"
+    arrayentity="GPLineRF_Ext"
+    cascadeDelete="true"
+    owner="false"/>
+</entity>

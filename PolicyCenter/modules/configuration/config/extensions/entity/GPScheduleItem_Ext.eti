@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  effDatedBranchType="PolicyPeriod"
+  entity="GPScheduleItem_Ext"
+  exportable="true"
+  loadable="false"
+  table="gpscheduleitem_ext"
+  type="effdated">
+  <implementsInterface
+    iface="gw.api.copier.EffDatedCopyable"
+    impl="gw.api.copier.EffDatedCopier"/>
+  <implementsEntity
+    name="GPAttributeDelegate_Ext"/>
+  <foreignkey
+    fkentity="GPSchedule_Ext"
+    name="GPSchedule"
+    nullok="false"/>
+</entity>

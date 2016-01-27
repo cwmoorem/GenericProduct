@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Product
+  abbreviation="GP"
+  codeIdentifier="GPGeneric"
+  daysUntilQuoteNeeded="14"
+  defaultTermType="Annual"
+  priority="50"
+  productAccountType="Any"
+  productType="Personal"
+  public-id="GPGeneric"
+  quoteRoundingLevel="0"
+  quoteRoundingMode="HALF_UP">
+  <AvailablePolicyTerms>
+    <AvailablePolicyTerm
+      codeIdentifier="zf0ie7timcf9tdspe7krr51dre9"
+      public-id="zf0ie7timcf9tdspe7krr51dre9"
+      termType="Other"/>
+    <AvailablePolicyTerm
+      codeIdentifier="zqihgnoetdmale19sr27pdo3378"
+      public-id="zqihgnoetdmale19sr27pdo3378"
+      termType="Annual"/>
+  </AvailablePolicyTerms>
+  <DocTemplateRefs/>
+  <InitializeScript/>
+  <ProductPolicyLinePatterns>
+    <ProductPolicyLinePattern
+      codeIdentifier="z0ghg6tb8p7sq6h1i0tul4hkv78"
+      policyLinePattern="GPLine"
+      public-id="z0ghg6tb8p7sq6h1i0tul4hkv78"/>
+  </ProductPolicyLinePatterns>
+  <ProductQuestionSetPatterns/>
+</Product>

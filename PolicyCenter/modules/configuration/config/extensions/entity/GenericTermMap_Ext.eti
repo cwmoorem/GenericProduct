@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  desc="Generic term mapping for the clause"
+  entity="GenericTermMap_Ext"
+  exportable="true"
+  table="generictermmap_ext"
+  type="retireable">
+  <implementsEntity
+    name="GenericAttributeDelegate_Ext"/>
+  <foreignkey
+    desc="Parent clause"
+    fkentity="GenericClauseMap_Ext"
+    name="GenericClauseMapping"
+    nullok="false"/>
+  <column
+    desc="Default value of the term if any"
+    name="DefaultValue"
+    nullok="true"
+    type="shorttext"/>
+  <index
+    name="GenericTerm1">
+    <indexcol
+      keyposition="1"
+      name="Code"/>
+    <indexcol
+      keyposition="2"
+      name="Retired"/>
+  </index>
+</entity>

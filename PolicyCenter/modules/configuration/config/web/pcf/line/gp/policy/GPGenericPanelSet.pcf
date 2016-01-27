@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <PanelSet
+    id="GPGenericPanelSet">
+    <Require
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Require
+      name="line"
+      type="GPGenericLine_Ext"/>
+    <Require
+      name="openForEdit"
+      type="Boolean"/>
+    <Require
+      name="jobWizardHelper"
+      type="gw.api.web.job.JobWizardHelper"/>
+    <Require
+      name="pageProcess"
+      type="acc.pc.lob.gp.pageprocess.GPGenericScreen"/>
+    <PanelRef>
+      <TitleBar
+        id="ListTitle"
+        title="policyPeriod.Policy.GenericProduct != null ? policyPeriod.Policy.GenericProduct.Name : displaykey.Web.Policy.GP.GPGeneric_Ext.NamePlural"/>
+      <Toolbar>
+        <IteratorButtons
+          addLabel="displaykey.Web.Generic.Add"
+          iterator="CoverableLV"
+          removeLabel="displaykey.Web.Generic.Remove"/>
+        <ToolbarDivider/>
+      </Toolbar>
+      <ListDetailPanel
+        id="CoverableListDetailPanel"
+        selectionName="selectedItem"
+        selectionType="GPGeneric_Ext">
+        <ListViewPanel
+          id="CoverableLV">
+          <RowIterator
+            editable="openForEdit"
+            elementName="item"
+            hasCheckBoxes="true"
+            hideCheckBoxesIfReadOnly="true"
+            toCreateAndAdd="pageProcess.createAndAddGPGeneric()"
+            toRemove="pageProcess.line.removeGPGeneric_Ext(item)"
+            type="GPGeneric_Ext"
+            value="pageProcess.line.GPGenerics">
+            <ToolbarFlag
+              name="item"/>
+            <Row>
+              <Cell
+                align="right"
+                id="ItemID"
+                label="displaykey.Web.Policy.GP.GPGeneric_Ext.ID"
+                sortBy="item.FixedID"
+                sortOrder="1"
+                value="item.FixedId"
+                width="80"/>
+              <Cell
+                align="left"
+                id="Type"
+                label="&quot;Type&quot;"
+                value="item.GenericSubproduct.Name"
+                width="200"/>
+              <Cell
+                align="left"
+                id="CreateUser"
+                label="&quot;Created By&quot;"
+                value="item.CreateUser.DisplayName"
+                width="200"/>
+            </Row>
+          </RowIterator>
+        </ListViewPanel>
+        <CardViewPanel
+          id="CoverableDetailsCV">
+          <Card
+            id="CoverableDetailCard"
+            title="&quot;Details&quot;">
+            <PanelRef
+              def="GPGenericDetailsDV(selectedItem,pageProcess)">
+              <TitleBar
+                title="&quot;Details&quot;"
+                visible="pageProcess.uiStyle(selectedItem) == &quot;singletab&quot;"/>
+            </PanelRef>
+            <PanelDivider/>
+            <PanelIterator
+              elementName="schedule"
+              id="SchedulePanelIterator"
+              value="pageProcess.sortedSchedules(selectedItem)">
+              <PanelRef
+                available="true"
+                def="GPGenericSchedulePanelSet(schedule)"
+                editable="true"
+                visible="true">
+                <TitleBar
+                  title="schedule.GenericScheduleMap.Required ? schedule.GenericScheduleMap.Name + &quot; (required)&quot; : schedule.GenericScheduleMap.Name"/>
+              </PanelRef>
+              <PanelDivider/>
+            </PanelIterator>
+            <PanelRef
+              def="GPGenericCoveragesDV(selectedItem,pageProcess)"
+              visible="pageProcess.uiStyle(selectedItem) == &quot;singletab&quot;">
+              <TitleBar
+                title="&quot;Coverages&quot;"
+                visible="pageProcess.uiStyle(selectedItem) == &quot;singletab&quot;"/>
+            </PanelRef>
+            <PanelRef
+              def="GPGenericExclusionsDV(selectedItem,pageProcess)"
+              visible="pageProcess.uiStyle(selectedItem) == &quot;singletab&quot;">
+              <TitleBar
+                title="&quot;Exclusions and Conditions&quot;"
+                visible="pageProcess.uiStyle(selectedItem) == &quot;singletab&quot;"/>
+            </PanelRef>
+            <PanelRef
+              def="GPGenericModifiersDV(selectedItem,pageProcess)"
+              visible="pageProcess.uiStyle(selectedItem) == &quot;singletab&quot;">
+              <TitleBar
+                title="&quot;Modifiers&quot;"/>
+            </PanelRef>
+          </Card>
+          <Card
+            id="CoveragesCard"
+            title="&quot;Coverages&quot;"
+            visible="selectedItem.GenericSubproduct != null and pageProcess.uiStyle(selectedItem) == &quot;multitab&quot;">
+            <PanelRef
+              def="GPGenericCoveragesDV(selectedItem,pageProcess)"
+              id="coveragespanel"/>
+          </Card>
+          <Card
+            id="ExclusionsCard"
+            title="&quot;Conditions &amp; Exclusions&quot;"
+            visible="selectedItem.GenericSubproduct != null and pageProcess.uiStyle(selectedItem) == &quot;multitab&quot;">
+            <PanelRef
+              def="GPGenericExclusionsDV(selectedItem,pageProcess)"
+              id="ExclusionsPanelRef"/>
+          </Card>
+          <Card
+            id="modifiersCard"
+            title="&quot;Modifiers&quot;"
+            visible="selectedItem.GenericSubproduct != null and pageProcess.uiStyle(selectedItem) == &quot;multitab&quot;">
+            <PanelRef
+              def="GPGenericModifiersDV(selectedItem,pageProcess)"
+              id="modifierspanel"/>
+          </Card>
+        </CardViewPanel>
+      </ListDetailPanel>
+    </PanelRef>
+  </PanelSet>
+</PCF>

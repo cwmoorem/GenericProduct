@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="GPGenericExcl_Ext">
+  <Columns>
+    <Column
+      beanPath="GPGenericExcl_Ext.Pattern"
+      name="pattern"/>
+  </Columns>
+  <DisplayName><![CDATA[pattern]]></DisplayName>
+</Entity>

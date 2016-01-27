@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <InputSet
+    id="GenericProductInputInputSet"
+    mode="string_multiline">
+    <Require
+      name="genericAttribute"
+      type="GenericAttributeMap_Ext"/>
+    <Require
+      name="coverable"
+      type="GPGeneric_Ext"/>
+    <Variable
+      initialValue="new acc.pc.lob.gp.pageprocess.GenericProductInputInputSet(genericAttribute, coverable)"
+      name="pageProcess"/>
+    <TextAreaInput
+      editable="true"
+      id="stringValueInput"
+      label="pageProcess.name"
+      numRows="4"
+      required="pageProcess.required"
+      value="pageProcess.stringValue"
+      visible="pageProcess.genericAttribute.ListType == null"/>
+  </InputSet>
+</PCF>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="GPGenericLine_Ext"
+  desc="Generic line of business"
+  displayName="Generic"
+  subpackage="lob.gp"
+  supertype="PolicyLine">
+  <implementsInterface
+    iface="gw.api.policy.PolicyLineMethods"
+    impl="acc.pc.lob.gp.GPPolicyLineMethods"/>
+  <implementsEntity
+    name="Coverable"
+    adapter="acc.pc.lob.gp.GPLineCoverableAdapter"/>
+  <implementsEntity
+    name="Modifiable"
+    adapter="acc.pc.lob.gp.GPGenericLine_ExtModifiableAdapter"/>
+
+  <column
+    name="ReferenceDateInternal"
+    type="datetime"
+	nullok="true"
+    desc="Internal field for storing the reference date of this entity on bound policy periods."/>
+  <array
+    name="GPCosts"
+    arrayentity="GPCost_Ext"
+    cascadeDelete="true"/>
+  <array
+    name="GPLineCoverages"
+    desc="Line-level coverages for Generic"
+    arrayentity="GPGenericLineCov_Ext"
+    owner="false"
+    cascadeDelete="true"/>
+  <array
+    name="GPLineExclusions"
+    desc="Line-level exclusions for Generic"
+    arrayentity="GPGenericLineExcl_Ext"
+    owner="false"
+    cascadeDelete="true"/>
+  <array
+    name="GPLineConditions"
+    desc="Line-level conditions for Generic"
+    arrayentity="GPGenericLineCond_Ext"
+    owner="false"
+    cascadeDelete="true"/>
+  <array
+    name="GPLineModifiers"
+    desc="Line-level modifiers for Generic"
+    arrayentity="GPLineMod_Ext"
+    owner="false"
+    cascadeDelete="true"/>
+  <array
+    name="GPGenerics"
+    desc="Generic Coverable"
+    arrayentity="GPGeneric_Ext"
+    owner="false"
+    cascadeDelete="true"/>
+
+</subtype>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  effDatedBranchType="PolicyPeriod"
+  entity="GPSchedule_Ext"
+  exportable="true"
+  loadable="false"
+  table="gpschedule_ext"
+  type="effdated">
+  <implementsInterface
+    iface="gw.api.copier.EffDatedCopyable"
+    impl="gw.api.copier.EffDatedCopier"/>
+  <foreignkey
+    fkentity="GenericScheduleMap_Ext"
+    name="GenericScheduleMap"
+    nullok="true"/>
+  <foreignkey
+    fkentity="GPGeneric_Ext"
+    name="GPGeneric"
+    nullok="false"/>
+  <array
+    arrayentity="GPScheduleItem_Ext"
+    name="GPScheduleItem"/>
+</entity>

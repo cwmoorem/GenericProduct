@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="GPGeneric20Cov"
+  coverageCategory="GPGenericStndGrp"
+  coverageSubtype="GPGenericCov_Ext"
+  coveredPartyType="FirstParty"
+  lookupTableName="GPGenericCov_Ext"
+  owningEntityType="GPGeneric_Ext"
+  policyLinePattern="GPLine"
+  priority="2000"
+  public-id="GPGeneric20Cov"
+  referenceDateByType="PolicyTerm">
+  <AvailabilityScript><![CDATA[return GPGeneric_Ext.coverageAvailable("GPGeneric20Cov")]]></AvailabilityScript>
+  <ExistenceScript><![CDATA[return GPGeneric_Ext.coverageExistence("GPGeneric20Cov")]]></ExistenceScript>
+  <CovTerms/>
+</CoveragePattern>

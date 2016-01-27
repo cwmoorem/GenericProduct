@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="GPTransaction_Ext"
+  type="effdated"
+  desc="A transaction for the Generic line"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  platform="false"
+  loadable="false"
+  subpackage="lob.gp"
+  table="gptransaction_ext">
+  <implementsEntity
+    name="Transaction"
+    adapter="acc.pc.lob.gp.financials.GPTransactionAdapter"/>
+  <foreignkey
+    name="GPCost_Ext"
+    desc="The cost this transaction modifies."
+    fkentity="GPCost_Ext"
+    nonEffDated="true"
+    nullok="false"/>
+</entity>
